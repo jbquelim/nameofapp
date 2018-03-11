@@ -30,7 +30,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 
 group :production do
-  gem 'pg, ~> 0.20'
+  gem 'pg', '~> 0.20.0'
 end
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
