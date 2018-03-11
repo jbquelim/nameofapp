@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Nameofapp</title>
-    <%= csrf_meta_tags %>
+  <title>Nameofapp</title>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= csrf_meta_tags %>
+</head>
 
   <body>
-    <nav>
-  <ul>
-    <li><%= link_to "Home", root_path %></li>
-    <li><%= link_to "About", simple_pages_about_path %></li>
-    <li><%= link_to "Contact", simple_pages_contact_path %></li>
-  </ul>
-</nav>
+	  <header>
+	    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	    	<div class="container">
+	       		<div class="navbar-header">
+	         		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse">
+	           			<span class="sr-only">Toggle navigation</span>
+	              			<span class="glyphicon glyphicon-plus"></span>
+	          		</button>
+					  <ul>
+					    <li><%= link_to "Home", root_path %></li>
+					    <li><%= link_to "About", simple_pages_about_path %></li>
+					    <li><%= link_to "Work", simple_pages_work_path %></li>
+					    <li><%= link_to "Contact", simple_pages_contact_path %></li>
+					  </ul>
+	  			</div><!--collapsible-->
+	  		</div><!--container-->
+		</nav>
+	</header>
 
 <%= yield %>
 
 <footer>
   &copy; 2018 Bike Berlin
 </footer>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </body>
 </html>
