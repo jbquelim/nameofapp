@@ -26,12 +26,19 @@ gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
+# Use jQuery as javascript library
+gem 'jquery-rails'
+
+group :production do
+  gem 'pg, ~> 0.20'
+end
+
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 3.0'
+# gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -54,37 +61,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-gem 'jquery-rails'
-
-group :production do 
-  gem 'pg'
-end
-
-group :production do
-  gem 'rails_12factor'
-end
-
-#Authentication gem
-gem 'devise'
-
-#Authorization gem
-gem 'cancancan', '~> 1.10'
-
-#pagination
-gem 'will_paginate', '~> 3.1.1'
-
-#for writing tests
-group :development, :test do
-  gem 'rspec-rails', '~> 3.7'
-end
-
-#for functionals testing
-gem 'rails-controller-testing'
-
-# payment methods
-gem 'stripe'
-
-gem 'dalli'
-
-gem 'redis-rails'
